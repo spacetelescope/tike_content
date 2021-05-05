@@ -5,7 +5,7 @@ JupyterHub is a compute platform for running Python Notebooks and other software
 
 **Browser Compatibility: This platform has only been confirmed to work with Firefox and Chrome. _Most functionality does NOT work in Safari._**
 
-At this time, we cannot guarantee that any data created using this this service will persist.
+At this time, we cannot guarantee that any data created using this service will persist.
 
 ----
 
