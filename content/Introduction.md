@@ -15,9 +15,9 @@ or you can use the links below to learn more.
 <img src="../images/icons/school_black_24dp.svg" style="vertical-align: bottom; width:1.5em; margin-right:0.25em;"/> [Example science tutorials](science-examples.md)
 
 
-**Caution!** the server that runs your personal instance of TIKE will be terminated after ~1 hour of inactivity. At this time, no data you upload or create within TIKE is guaranteed to remain for any duration (though it will tend to persist on a best-effort basis).
+**Caution!** the virtual server that runs your personal instance of TIKE will be terminated after ~1 hour of inactivity. At this time, no data you upload or create within TIKE is guaranteed to remain for any duration (though it will tend to persist on a best-effort basis).
 
-**Questions?** Please email the [MAST help desk](mailto:archive@stsci.edu). We welcome suggestions for improvement and content contributions - please open an issue or create a pull request on [GitHub](https://github.com/spacetelescope/tike_content).
+**Questions?** Please email the [MAST help desk](mailto:archive@stsci.edu) or [open an issue on GitHub](https://github.com/spacetelescope/tike_content). We particularly welcome suggestions for adding additional packages and tutorials.
 
 ---
 *Last Updated: 2021-06-15*
