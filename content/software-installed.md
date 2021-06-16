@@ -16,7 +16,7 @@ astropy, astroquery, pyvo.
 * Machine learning: tensorflow, scikit-learn.
 * Cloud tools: awscli, boto3.
 
-Note: you can view the full list of packages installed by inspecting the [TIKE configuration files](https://github.com/spacetelescope/jupyterhub-deploy/tree/main/deployments/tike/image/environments/tess) on GitHub.
+This list is non-exhaustive. For example, many packages have a significant number of dependencies which are also installed, but are not listed here for the benefit of clarity. You can view the full list of packages installed by inspecting the [TIKE configuration files](https://github.com/spacetelescope/jupyterhub-deploy/tree/main/deployments/tike/image/environments/tess) on GitHub.
 
 ## Linux software
 
@@ -27,4 +27,4 @@ Commands which work in a terminal can also be used in a Jupyter notebook by pref
 
 ## Missing your favorite software?
 
-If a package you need is missing from the configuration, we encourage you to [open a GitHub issue](https://github.com/spacetelescope/jupyterhub-deploy/issues/new) or contact the [MAST help desk](mailto:archive@stsci.edu) to suggest the package for inclusion. Please include a brief justification explaining the purpose of the software.
+If a package you need is missing from the configuration, we encourage you to [open a GitHub issue](https://github.com/spacetelescope/jupyterhub-deploy/issues/new) or contact the [MAST help desk](mailto:archive@stsci.edu) to suggest the package for inclusion. Please include a brief justification explaining the audience and purpose of the software.
