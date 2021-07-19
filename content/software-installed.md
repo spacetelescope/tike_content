@@ -12,11 +12,13 @@ numpy, scipy, matplotlib, pandas.
 * Core astronomy packages:
 astropy, astroquery, pyvo.
 * Data analysis packages: emcee, george, celerite.
-* TESS-focused packages: lightkurve, eleanor, astrocut.
+* TESS-focused packages: lightkurve, eleanor(omitted), astrocut.
 * Machine learning: tensorflow, scikit-learn.
 * Cloud tools: awscli, boto3.
 
 This list is non-exhaustive. For example, many packages have a significant number of dependencies which are also installed, but are not listed here for the benefit of clarity. You can view the full list of packages installed by inspecting the [TIKE configuration files](https://github.com/spacetelescope/jupyterhub-deploy/tree/main/deployments/tike/image/environments/tess) on GitHub.
+
+*NOTE* eleanor is temporarily omitted pending an update for eleanor to Tensforflow > 2 to address security vulnerabilities.
 
 ## Linux software
 
