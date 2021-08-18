@@ -17,7 +17,9 @@ or you can use the links below to learn more.
 
 **Caution!** the virtual server that runs your personal instance of TIKE will be terminated after ~1 hour of inactivity. At this time, no data you upload or create within TIKE is guaranteed to remain for any duration (though it will tend to persist on a best-effort basis).
 
+**What's New?** See the [News Page](news.md) for recent updates to TIKE.
+
 **Questions?** Please email the [MAST help desk](mailto:archive@stsci.edu) or [open an issue on GitHub](https://github.com/spacetelescope/tike_content). We particularly welcome suggestions for adding additional packages and tutorials.
 
 ---
-*Last Updated: 2021-06-15*
+*Last Updated: 2021-08-18*
