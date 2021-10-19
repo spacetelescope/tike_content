@@ -10,7 +10,7 @@ or you can use the links below to learn more.
 
 <img src="../images/icons/get_app_black_24dp.svg" style="vertical-align: bottom; width:1.5em; margin-right:0.25em;"/> [How to install extra software?](extra-software.md)
 
-<img src="../images/icons/cloud_download_black_24dp.svg" style="vertical-align: bottom; width:1.5em; margin-right:0.25em;"/> [How to work with data in the cloud?](data-access.md)
+<img src="../images/icons/cloud_download_black_24dp.svg" style="vertical-align: bottom; width:1.5em; margin-right:0.25em;"/> [How to work with data in the cloud?](data-access.ipynb)
 
 <img src="../images/icons/school_black_24dp.svg" style="vertical-align: bottom; width:1.5em; margin-right:0.25em;"/> [Example science tutorials](science-examples.md)
 
