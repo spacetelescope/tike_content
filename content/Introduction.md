@@ -15,7 +15,7 @@ or you can use the links below to learn more.
 <img src="../images/icons/school_black_24dp.svg" style="vertical-align: bottom; width:1.5em; margin-right:0.25em;"/> [Example science tutorials](science-examples.md)
 
 
-**Caution!** The virtual server that runs your personal instance of TIKE will be terminated after ~1 hour of inactivity. At this time, no data you upload or create within TIKE is guaranteed to remain for any duration. It will tend to persist on a best-effort basis, but we strongly encourage you to back up any essential code and data on another system. 
+**Caution!** TIKE computing and storage are limited resources. At this time, no data you upload or create within TIKE is guaranteed to remain for any duration. Files in your home directory (/home/jovyan) will persist on a best-effort basis, but we strongly recommend that you back up any essential code and data to another system.  We encourage users to store large files only sparingly: we will limit the average data volume of user home directories to approximately 25 GB or less, and we will periodically remove excessive data if needed. 
 
 **What's New?** See the [News Page](news.md) for recent updates to TIKE.
 
