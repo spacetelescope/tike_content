@@ -7,6 +7,7 @@ While pre-installation is the preferred method, users may occasionally wish to i
 **Caution:** installing extra software may alter the functionality of your environment. Proceed at your own risk. Fortunately, TIKE creates an isolated environment for each individual user, so you will not be able to harm the platform for others.
 
 
+
 ## Installing an extra Python package
 
 The easiest way to add a Python package to your TIKE environment is to install it using the `pip` terminal command. You can call this command from a notebook cell by prefixing it with the `!` character, for example:
@@ -24,22 +25,22 @@ To upgrade an existing package that is already installed, you will need to add t
 These commands will only work for Python packages that have been published on the [Python Package Index](https://pypi.org). If a package has not been published there, you can install it straight from a git repository as follows:
 
 ```
-!pip install git+https://github.com/astropy/astropy.git 
+!pip install git+https://github.com/astropy/astropy.git
 ```
 
 
 ## Creating a new Python environment
 
-The `pip` command demonstrate above will alter the Python environment that is running your notebook. To avoid altering the default environment, it is often desirable to install packages in a custom environment.
+The `pip` command demonstrate above will alter the Python environment that is running your notebook. To avoid altering the default environment, it is often desirable to install packages in a custom environment.  Furthermore, TIKE provides a pre-specified Python environment that refreshes each time the computing server is restarted. While it is possible to temporarily update the TIKE environments using pip or conda commands during a session, as described above, such changes will not persist after the notebook server is restarted.
 
-You can create a custom Python notebook environment on TIKE by entering the following commands in a terminal (<span style="font-variant:small-caps;">file › new › terminal</span>):
+You can create a custom, persistent Python notebook environment on TIKE by entering the following commands in a terminal (<span style="font-variant:small-caps;">file › new › terminal</span>):
 
 ```
 python -m venv userenv
 source userenv/bin/activate
 ```
 
-In this example, `userenv` is the arbitrary name of the environment. You can choose a different name. 
+In this example, `userenv` is the arbitrary name of the environment. You can choose a different name.
 
 Next, you need to register the new Python environment for use in your instance of TIKE's Jupyter notebook server. This can be done using the `ipykernel` tool as follows:
 
@@ -50,6 +51,15 @@ python -m ipykernel install --user --name=userenv
 
 Having executed these commands, the Jupyter notebook server should automatically recognize the new kernel and offer it as an option.
 
+
+## Creating a new Anaconda environment
+
+ In addition to creating a new persistent Python virtual environment as described above, it is also possible to create a custom Anaconda or Miniconda environment in your TIKE home directory (`/home/jovyan`) by uploading the appropriate installation script into TIKE. To use one of these new environments (e.g. `mycondaenv`) in notebooks, similar to the above, you will need to register it in your instance of TIKE's Jupyter notebook server:
+ ```
+ conda activate mycondaenv
+ pip install ipykernel
+ python -m ipykernel install --user --name=mycondaenv
+ ```
 
 ## Installing extra Linux software
 
