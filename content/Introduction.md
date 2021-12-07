@@ -15,11 +15,11 @@ or you can use the links below to learn more.
 <img src="../images/icons/school_black_24dp.svg" style="vertical-align: bottom; width:1.5em; margin-right:0.25em;"/> [Example science tutorials](science-examples.md)
 
 
-**Caution!** TIKE computing and storage are limited resources. At this time, no data you upload or create within TIKE is guaranteed to remain for any duration. Files in your home directory (/home/jovyan) will persist on a best-effort basis, but we strongly recommend that you back up any essential code and data to another system.  We encourage users to store large files only sparingly: we will limit the average data volume of user home directories to approximately 25 GB or less, and we will periodically remove excessive data if needed. 
+**Caution!** TIKE computing and storage are limited resources. At this time, no data you upload or create within TIKE is guaranteed to remain for any duration. Files in your home directory (/home/jovyan) will persist on a best-effort basis, but we strongly recommend that you back up any essential code and data to another system.  We encourage users to store large files only sparingly: we will limit the average data volume of user home directories to approximately 25 GB or less, and we will periodically remove excessive data if needed.
 
 **What's New?** See the [News Page](news.md) for recent updates to TIKE.
 
 **Questions?** Please email the [MAST help desk](mailto:archive@stsci.edu) or [open an issue on GitHub](https://github.com/spacetelescope/tike_content). We particularly welcome suggestions for adding additional packages and tutorials.
 
 ---
-*Last Updated: 2021-08-18*
+*Last Updated: 2021-12-07*
