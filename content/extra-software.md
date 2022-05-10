@@ -60,9 +60,8 @@ Having executed these commands, the Jupyter notebook server should automatically
  conda activate /home/jovyan/mycondaenv
  ```
 
- To use one of these new environments (e.g. `mycondaenv`) in notebooks, similar to the above, you will need to register it in your instance of TIKE's Jupyter notebook server:
+ To use one of these new environments in notebooks, similar to the above, you will need to register it in your instance of TIKE's Jupyter notebook server:
  ```
- conda activate mycondaenv
  pip install ipykernel
  python -m ipykernel install --user --name=mycondaenv
  ```
