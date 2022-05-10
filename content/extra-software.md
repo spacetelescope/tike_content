@@ -54,9 +54,14 @@ Having executed these commands, the Jupyter notebook server should automatically
 
 ## Creating a new Anaconda environment
 
- In addition to creating a new persistent Python virtual environment as described above, it is also possible to create a custom Anaconda or Miniconda environment in your TIKE home directory (`/home/jovyan`) by uploading the appropriate installation script into TIKE. To use one of these new environments (e.g. `mycondaenv`) in notebooks, similar to the above, you will need to register it in your instance of TIKE's Jupyter notebook server:
+ In addition to creating a new persistent Python virtual environment as described above, it is also possible to create a custom Anaconda or Miniconda environment in your TIKE home directory (`/home/jovyan`). This can be done either by using the built-in conda or by uploading and running the appropriate conda installation script into TIKE. To create a new persistent conda environment, you can use the `prefix` option with conda:
  ```
- conda activate mycondaenv
+ conda create --prefix=/home/jovyan/mycondaenv python=3.10
+ conda activate /home/jovyan/mycondaenv
+ ```
+
+ To use one of these new environments in notebooks, similar to the above, you will need to register it in your instance of TIKE's Jupyter notebook server:
+ ```
  pip install ipykernel
  python -m ipykernel install --user --name=mycondaenv
  ```
