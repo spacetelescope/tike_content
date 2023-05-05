@@ -83,4 +83,4 @@ These tutorials are focused on machine learning. In them, you'll learn to use ML
 
 ## Convolutional Neural Networks (CNNs)
 * [Classifying Galaxy Mergers with CNNs](../../hellouniverse/notebooks/hello-universe/Classifying_JWST-HST_galaxy_mergers_with_CNNs/Classifying_JWST-HST_galaxy_mergers_with_CNNs.ipynb)
-* [Classifying TESS Flares with CNNs][../../hellouniverse/notebooks/hello-universe/Classifying_TESS_flares_with_CNNs/Classifying_TESS_flares_with_CNNs.ipynb]
+* [Classifying TESS Flares with CNNs](../../hellouniverse/notebooks/hello-universe/Classifying_TESS_flares_with_CNNs/Classifying_TESS_flares_with_CNNs.ipynb)
