@@ -10,6 +10,4 @@ This repository primarily brings together information available in a variety of 
 
 1. To add a new topic to this curation, [open an issue](https://github.com/spacetelescope/tike_content/issues) in this repository.
 2. To correct information contained in this curation effort, consider a [pull request](https://github.com/spacetelescope/tike_content/pulls) against this repository.
-2. To contribute a new Jupyter Notebook or Tutorial, consider adding it to the [STScI notebooks repository](https://github.com/spacetelescope/notebooks) and follow its [notebook style guide](https://github.com/spacetelescope/style-guides/blob/master/guides/jupyter-notebooks.md)
-
-
+2. To contribute a new Jupyter Notebook or Tutorial, consider adding it to the [MAST Notebooks repository](https://github.com/spacetelescope/mast_notebooks) and follow the [Notebook style guide].(https://github.com/spacetelescope/style-guides/blob/master/guides/jupyter-notebooks.md)
