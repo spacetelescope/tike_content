@@ -10,17 +10,20 @@ TIKE comes pre-installed with a set of Python packages and Linux software which 
 By default, TIKE includes two Python environments, a bare-bones "Python 3" environment and a "TESS" environment containing many packages.  To use the TESS Environment in a notebook, you may have to change the notebook's kernel, either by using the dropdown menu at the upper right of the notebook, or in the top JupyterLab menu (<span style="font-variant:small-caps;">Kernel › Change Kernel...</span>). At this time, the TESS kernel includes the following packages:
 
 * Core scientific packages:
-numpy, scipy, matplotlib, pandas.
+    * numpy
+    * scipy 
+    * matplotlib
+    * pandas
 * Core astronomy packages:
-astropy, astroquery, pyvo.
-* Data analysis packages: emcee, george, celerite.
-* TESS-focused packages: lightkurve, astrocut.
-* Machine learning: tensorflow, scikit-learn.
-* Cloud tools: awscli, boto3.
+    * astropy
+    * astroquery
+    * pyvo
+* TESS-focused packages, like lightkurve
+* Cloud tools 
+    * awscli 
+    * boto3
 
-This list is non-exhaustive. For example, many packages have a significant number of dependencies which are also installed, but are not listed here for the benefit of clarity. You can view the full list of packages installed by inspecting the [TIKE configuration files](https://github.com/spacetelescope/jupyterhub-deploy/tree/main/deployments/tike/image/environments/tess) on GitHub.
-
-*NOTE* eleanor is temporarily omitted pending an update for eleanor to Tensforflow > 2 to address security vulnerabilities.
+This list is non-exhaustive. For example, many packages have a significant number of dependencies which are also installed, but are not listed here for the benefit of clarity. You can view the full list of packages installed by inspecting the [TIKE configuration files](https://github.com/spacetelescope/science-platform-images/blob/main/deployments/tike/environments/tess/tess.pip) on GitHub.
 
 ## Linux software
 
@@ -31,4 +34,6 @@ Commands which work in a terminal can also be used in a Jupyter notebook by pref
 
 ## Missing your favorite software?
 
-If a package you need is missing from the configuration, we encourage you to [open a GitHub issue](https://github.com/spacetelescope/jupyterhub-deploy/issues/new) or contact the [MAST help desk](mailto:archive@stsci.edu) to suggest the package for inclusion. Please include a brief justification explaining the audience and purpose of the software. See also: [How to install extra software?](extra-software.md)
+See also: [How to install extra software?](extra-software.md)
+
+If your favorite software should be part of the default configurationwe encourage you to [open a GitHub issue](https://github.com/spacetelescope/science-platform-images/issues) or contact the [MAST help desk](mailto:archive@stsci.edu) to suggest the package for inclusion. Please include a brief justification explaining the audience and purpose of the software.
