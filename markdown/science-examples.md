@@ -10,7 +10,7 @@ Your TIKE instance comes pre-loaded with tutorials in the `notebooks` folder. Yo
 
 # MAST Notebooks
 
-These tutorials are specific to a particular science case and show how to use the MAST programmatic interface and the JupyterHub science platform to do research. The links on this page may only work within the TIKE platform, but you can find external links to the notebooks in GitHub here:  [Example science tutorials (GitHub)](science-examples-github.md).
+These tutorials are specific to a particular science case and show how to use the MAST programmatic interface and the JupyterHub science platform to do research. The links on this page may only work within the TIKE platform, but you visit the [MAST Notebooks Homepage](https://spacetelescope.github.io/mast_notebooks/intro.html).
 
 ## Science with TESS
 
