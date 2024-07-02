@@ -1,0 +1,28 @@
+name: celerite_docs
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy<1.26.2 
+  - scipy
+  - matplotlib
+  - corner
+  - arviz
+  - emcee
+  - pymc>5.0
+  - ipykernel
+  - pip
+  - lightkurve
+  - seaborn
+  - tqdm
+  - ipywidgets
+  - numba
+  - nutpie
+  
+  - pip:
+      - celerite2
+      - pymc-ext
+      - aesara-theano-fallback
+      - pytensor
+      - theano-pymc
+      - aesara
