@@ -26,3 +26,5 @@ dependencies:
       - pytensor
       - theano-pymc
       - aesara
+      - boto3
+      - s3fs
