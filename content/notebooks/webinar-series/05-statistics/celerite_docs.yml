@@ -28,3 +28,6 @@ dependencies:
       - aesara
       - boto3
       - s3fs
+      - fsspec
+      - aiobotocore
+      - s3transfer
