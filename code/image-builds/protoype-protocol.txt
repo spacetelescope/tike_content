@@ -1,0 +1,23 @@
+---
+image_name: TIKE 2025.05
+valid_on: 2025-05-12
+expires_on: 2025-12-31
+nb_repo: https://github.com/spacetelescope/tike_content
+root_nb_directory: content/notebooks/
+---
+
+# selected notebook directories
+data-access/
+lcviz-tutorial/
+tglc/
+zooniverse_view_lightcurve/
+
+
+# alternative selection method: ALL notebooks in root directory EXCEPT
+# . 
+# !aas-245/
+# !tesscut-in-the-cloud/
+# !webinar-series/
+
+
+
