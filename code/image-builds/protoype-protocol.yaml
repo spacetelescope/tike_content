@@ -14,11 +14,7 @@ image_spec_header:
 - nb_repo: https://github.com/spacetelescope/tike_content
 - root_nb_directory: content/notebooks/
 
-- base_conda_env_spec: <conda-spec.yml>
-
-- critical_packages:
-  - pkg1-x.y.z
-  - pkg2-x.y.z
+- python_version: 3.12.9
 
 selected_notebooks:
 - directories:
@@ -37,46 +33,33 @@ selected_notebooks:
       - tesscut-in-the-cloud/
       - webinar-series/
 
+# ---
 # It will be understood that directories are recursively included
 # but need only be one level deep if desired.
 # They are assumed to be relative extensions of root_nb_directory.
 
-# A conda-spec.yml file can be specified and defines the
-#   primitive Python environment and compiled programs (generally
-#   classic UNIX stuff like gcc, gfortran, Python-x.y.z, pip,
-#   cython, lapack,  blas, ...)
-# Typically in notebook images the compiler toolchains are already
-#   installed at the Linux level and don't need to be added as shown.
-#   However, if an independent conda env is set up,  it can be
-#   shared outside the context of Docker images and e.g. installed
-#   natively on a Mac laptop by people who want nothing to do with
-#   Docker.   Not that pre-built Docker images don't have their
-#   place because IMHO they do...  but for the people that want them.
-# Minimize conda-spec.yml,  particularly packages which pip install,
-#   those are better handled by requirements.txt and pip-tools/pip.
-# This spec is not attempting to define multiple conda envs although
-#   our framework was designed to handle that case.
-
-# critical_packages are those that make this image what it is,  and/or
-#   are the packages most users will want to know the versions of without
-#   looking through 100 other dependencies.  These packages can be
-#   specified w/wo version constraints but will be a required part
-#   of the image union and ultimately x.y.z will be determined if
-#   left open here.
-
+# ---
+# To define the basic environment,  the simplest form is the
+# "python_version" directive which merely defines the Python version.
+# Any other tools required to build Python extensions (e.g. gcc or
+# lapack or fftw or cython) can be chosen arbitrarily by the
+# science-platform-images build system.
+#
 # A requirements.txt file at any level of the specified directories
 #   will be included in the union of image requirements and for the
 #   purposes of the build renamed to something which identifies its
 #   directory-of-origin
-
+#
 # include_subdirs *could* default to [ . ]
 # exclude_subdirs *could* default to []
-
+#
 # root_nb_directory can be specified in the image_spec_header as default
 #   or for each directory block as an override.
 # root_nb_directory defaults to "" meaning top-of-repo (could also be /)
-
-# More succinct syntax is possible but using list formats prevents
-#   re-ordering if the spec is round-tripped through some program
-#   eliminating the list syntax is better if we're not worried about
-#   re-ordering.
+#
+# ---
+# Planned outputs from science-platform-images:
+# 1. Comprehensive pip package list  (pip-tools output)
+# 2. Notebook package union,  with requirements resolution
+# 3. Full conda spec for environment which will include Python + base tools
+#
