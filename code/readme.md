@@ -1,3 +1,3 @@
 # Caution!
 
-These documents were not designed to teach a particular skill. Advanced users may find the python scripts handy, and the test notebooks can be helpful to measure performance. If you are looking for tutorials, please navigate back to the [introduction.](../content/introduction.md)
+This directory contains no useful information for TIKE users. It is intended only to assist the TIKE development team. If you are looking for tutorials, please navigate back to the [introduction](../content/introduction.md).
