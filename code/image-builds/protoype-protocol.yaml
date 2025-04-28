@@ -1,37 +1,32 @@
-# I added a few ideas but this is your spec so what we end up
-# with should be what is good for notebook users.   To that end
-# it's OK to go back to your original format but here is what
-# came to mind for YAML.
+# Flattened version while maintaining header organization
 
+# Image header information
 image_spec_header:
-- image_name: TIKE 2025.05
+  image_name: TIKE 2025.05
+  description: |
+    A block of text can be inserted here if desired, optional.
+    Potentially this or another field could also be on the spawner page.
+  valid_on: 2025-05-12
+  expires_on: 2025-12-31
+  python_version: 3.12.9
+  nb_repo: https://github.com/spacetelescope/tike_content
+  root_nb_directory: content/notebooks/
 
-- description: |
-  A block of text can be inserted here if desired,  optional.
-  Potentially this or another field could also be on the spawner page.
-- valid_on: 2025-05-12
-- expires_on: 2025-12-31
-- nb_repo: https://github.com/spacetelescope/tike_content
-- root_nb_directory: content/notebooks/
-
-- python_version: 3.12.9
-
+# Selected notebooks configuration,  each list item is a set of
+# requirments related to one repo which may be defaulted to one
+# specified in the image spec header.
 selected_notebooks:
-- directories:
-    - include_subdirs:
+  - include_subdirs:
       - data-access/
       - lcviz-tutorial/
       - tglc/
       - zooniverse_view_lightcurve/
-
-- directories:
-    - root_nb_directory: content/notebooks/
-    - include_subdirs:
+  - nb_repo: https://github.com/spacetelescope/mast_notebooks
+    root_nb_directory: notebooks/tess
+    include_subdirs:
       - .
-    - exclude_subdirs:
-      - aas-245/
-      - tesscut-in-the-cloud/
-      - webinar-series/
+    exclude_subdirs:
+      - removing_scattered_light_using_regression
 
 # ---
 # It will be understood that directories are recursively included
@@ -39,7 +34,7 @@ selected_notebooks:
 # They are assumed to be relative extensions of root_nb_directory.
 
 # ---
-# To define the basic environment,  the simplest form is the
+# To define the basic environment, the simplest form is the
 # "python_version" directive which merely defines the Python version.
 # Any other tools required to build Python extensions (e.g. gcc or
 # lapack or fftw or cython) can be chosen arbitrarily by the
@@ -60,6 +55,6 @@ selected_notebooks:
 # ---
 # Planned outputs from science-platform-images:
 # 1. Comprehensive pip package list  (pip-tools output)
-# 2. Notebook package union,  with requirements resolution
+# 2. Notebook package union, with requirements resolution
 # 3. Full conda spec for environment which will include Python + base tools
 #
