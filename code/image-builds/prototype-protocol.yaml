@@ -4,11 +4,11 @@
 image_spec_header:
   image_name: TIKE 2025.05
   description: |
-    A block of text can be inserted here if desired, optional.
-    Potentially this or another field could also be on the spawner page.
+    This is a test image, designed to verify the functionality of the image
+    building protocol. It should not be deployed to OPS
   valid_on: 2025-05-12
   expires_on: 2025-12-31
-  python_version: 3.12.9
+  python_version: 3.12.10
   nb_repo: https://github.com/spacetelescope/tike_content
   root_nb_directory: content/notebooks/
 
@@ -24,9 +24,23 @@ selected_notebooks:
   - nb_repo: https://github.com/spacetelescope/mast_notebooks
     root_nb_directory: notebooks/tess
     include_subdirs:
-      - .
-    exclude_subdirs:
+      - beginner_how_to_use_lc
       - removing_scattered_light_using_regression
+  # TD1: is it efficient to duplicate mast_notebooks like this?
+  # Writing a more sophisticated protocol to handle sub_subdirs
+  # is not needed for an MVP, or maybe ever. Just food for thought.
+  - nb_repo: https://github.com/spacetelescope/mast_notebooks
+    root_nb_directory: notebooks/kepler
+    include_subdirs:
+      - instrumental_noise_4_electronic_noise.ipynb
+  # TD2: this is here only to test the "exclude"
+  - nb_repo: https://github.com/spacetelescope/mast_notebooks
+    root_nb_directory: notebooks/PanSTARRS
+    exclude_subdirs:
+      - PS1_DR2_TAP
+
+
+
 
 # ---
 # It will be understood that directories are recursively included
