@@ -1,0 +1,74 @@
+# Flattened version while maintaining header organization
+
+# Image header information
+image_spec_header:
+  image_name: TIKE 2025.05
+  description: |
+    This is a test image, designed to verify the functionality of the image
+    building protocol. It should not be deployed to OPS
+  valid_on: 2025-05-12
+  expires_on: 2025-12-31
+  python_version: 3.12.10
+  nb_repo: https://github.com/spacetelescope/tike_content
+  root_nb_directory: content/notebooks/
+
+# Selected notebooks configuration,  each list item is a set of
+# requirments related to one repo which may be defaulted to one
+# specified in the image spec header.
+selected_notebooks:
+  - include_subdirs:
+      - data-access/
+      - lcviz-tutorial/
+      - tglc/
+      - zooniverse_view_lightcurve/
+  - nb_repo: https://github.com/spacetelescope/mast_notebooks
+    root_nb_directory: notebooks/tess
+    include_subdirs:
+      - beginner_how_to_use_lc
+      - removing_scattered_light_using_regression
+  # TD1: is it efficient to duplicate mast_notebooks like this?
+  # Writing a more sophisticated protocol to handle sub_subdirs
+  # is not needed for an MVP, or maybe ever. Just food for thought.
+  - nb_repo: https://github.com/spacetelescope/mast_notebooks
+    root_nb_directory: notebooks/kepler
+    include_subdirs:
+      - instrumental_noise_4_electronic_noise.ipynb
+  # TD2: this is here only to test the "exclude"
+  - nb_repo: https://github.com/spacetelescope/mast_notebooks
+    root_nb_directory: notebooks/PanSTARRS
+    exclude_subdirs:
+      - PS1_DR2_TAP
+
+
+
+
+# ---
+# It will be understood that directories are recursively included
+# but need only be one level deep if desired.
+# They are assumed to be relative extensions of root_nb_directory.
+
+# ---
+# To define the basic environment, the simplest form is the
+# "python_version" directive which merely defines the Python version.
+# Any other tools required to build Python extensions (e.g. gcc or
+# lapack or fftw or cython) can be chosen arbitrarily by the
+# science-platform-images build system.
+#
+# A requirements.txt file at any level of the specified directories
+#   will be included in the union of image requirements and for the
+#   purposes of the build renamed to something which identifies its
+#   directory-of-origin
+#
+# include_subdirs *could* default to [ . ]
+# exclude_subdirs *could* default to []
+#
+# root_nb_directory can be specified in the image_spec_header as default
+#   or for each directory block as an override.
+# root_nb_directory defaults to "" meaning top-of-repo (could also be /)
+#
+# ---
+# Planned outputs from science-platform-images:
+# 1. Comprehensive pip package list  (pip-tools output)
+# 2. Notebook package union, with requirements resolution
+# 3. Full conda spec for environment which will include Python + base tools
+#
