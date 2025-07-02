@@ -1,0 +1,34 @@
+# Image header information
+image_spec_header:
+  image_name: TIKE 2025.07-beta
+  description: |
+    This is a beta test of the latest TIKE packages. Use at your own risk!
+  valid_on: 2025-07-02
+  expires_on: 2025-10-02
+  python_version: 3.11
+  nb_repo: https://github.com/spacetelescope/tike_content
+  root_nb_directory: content/notebooks/
+# these are the useful tike_content notebooks
+selected_notebooks:
+  - include_subdirs:
+      - data-access/
+      - lcviz-tutorial/
+      - tglc/
+      - zooniverse_view_lightcurve/
+  # -------------------------------------------------
+  # note: the below notebooks are included as a test.
+  # they should not be considered a useful subset
+  # of mast_notebooks for future releases
+  # -------------------------------------------------
+  # include TESS notebooks
+  - nb_repo: https://github.com/spacetelescope/mast_notebooks
+    root_nb_directory: notebooks/tess
+    include_subdirs:
+      - beginner_how_to_use_lc
+      - beginner_tour_lc_tp
+  # include Kepler notebooks
+  - nb_repo: https://github.com/spacetelescope/mast_notebooks
+    root_nb_directory: notebooks/kepler
+    include_subdirs:
+      - identifying_transiting_planet_signals
+      - instrumental_noise_4_electronic_noise
