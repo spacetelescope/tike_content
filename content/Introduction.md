@@ -22,6 +22,3 @@ or you can use the links below to learn more.
 **What's New?** See the [News Page](../markdown/news.md) for recent updates to TIKE.
 
 **Questions?** Please email the [MAST help desk](mailto:archive@stsci.edu) or [open an issue on GitHub](https://github.com/spacetelescope/tike_content). We particularly welcome suggestions for adding additional packages and tutorials.
-
----
-*Last Updated: 2023-04-11*
