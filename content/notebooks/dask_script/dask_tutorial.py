@@ -1,61 +1,30 @@
 # this script assumes that the python version has been set correctly and all packages versions have been appropriately downlaoded!
 from platform import python_version
+import os
+from functools import partial
 import time
 
 import astropy.units as u
-import dask
-import dask.array as da
-# import dask.dataframe as dd
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-import scipy 
-from tqdm import tqdm
-
 from astroquery.mast import Observations, Catalogs
 from astroquery.gaia import Gaia
 from astropy.coordinates import SkyCoord
+import dask
+import dask.array as da
 from dask import delayed, compute
 from dask.dataframe.utils import make_meta
-from dask.diagnostics import ProgressBar  # Import the ProgressBar
+from dask.diagnostics import ProgressBar 
+from dask.distributed import Client, performance_report, wait
 from dask_gateway import Gateway, GatewayCluster
+from datetime import datetime
 from distributed.diagnostics.plugin import PipInstall
-
-# Import necessary libraries
-import numpy as np
-import os
-import psutil
-import matplotlib.pyplot as plt
-from datetime import datetime
-import seaborn as sns
 from IPython.display import display, HTML
-
-# Import Dask components
-import dask
-from dask.distributed import Client, performance_report, wait
-
-from dask.distributed import performance_report
-
-import time
+import numpy as np
 import matplotlib.pyplot as plt
-import numpy as np
-from functools import partial
-import psutil
-import os
-from dask_gateway import Gateway, GatewayCluster
-
-import numpy as np
 import pandas as pd
-import os
 import psutil
-import matplotlib.pyplot as plt
-from datetime import datetime
+import scipy 
 import seaborn as sns
-from IPython.display import display, HTML
-
-# Import Dask components
-import dask
-from dask.distributed import Client, performance_report, wait
+from tqdm import tqdm
 
 def cpu_intensive_task(task_id, matrix_size=1000, iterations=20):
     """A CPU-intensive task that performs matrix operations repeatedly."""
@@ -184,14 +153,7 @@ def run_benchmark(client, task_type='cpu', num_tasks=100, matrix_size=1000, iter
     
     return df, total_duration
 
-
-
-
-
-
-
-
-
+    
 if __name__=='__main__':
     if python_version() != '3.11.7':
         raise ValueError(f'Python version is incorrect: {python_version()} should be 3.11.7')
@@ -200,8 +162,8 @@ if __name__=='__main__':
     # instantiate CPU 100 option
     cluster = gateway.new_cluster(profile='cpu100')
    
-    # Adaptively scale between 2 and 3 workers
-    cluster.adapt(minimum=2, maximum=3)
+    # Adaptively scale
+    cluster.adapt()
 
     client = cluster.get_client()
 
@@ -225,14 +187,4 @@ if __name__=='__main__':
                 matrix_size=1000,
                 iterations=20
             )
-    
-
-
-
-
-
-
-
-
-
-    
+            
