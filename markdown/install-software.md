@@ -30,8 +30,15 @@ In an activated kernel, you can use pip as you would normally. For example:
 
 `pip install lightkurve`
 
+## 4. Listing Available Environments
 
-## 4. Deleting an Environment
+To list of all available software environments (by environment name, not display name), use the command 
+
+`kernel-list`
+
+This will list both standard TIKE-provided and your custom environments.
+
+## 5. Deleting an Environment
 
 To remove an environment you no longer want, use the `kernel-delete` command, e.g.:
 
