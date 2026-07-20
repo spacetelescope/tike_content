@@ -1,0 +1,4 @@
+astroquery[all] >= 0.4.11
+reproject >= 0.19
+matplotlib >= 3.10.9
+s3fs
